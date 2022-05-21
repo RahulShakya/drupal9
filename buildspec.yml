@@ -25,6 +25,3 @@ phases:
 artifacts:
   files:
     - '**/*'
-  base-directory: /var/www/html
-  name: dev-backend-artficent
-  discart-paths: no

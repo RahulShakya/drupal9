@@ -1,5 +1,24 @@
-version: 0.0
-os: linux
-files:
-  - source: /
-    destination: /var/www/html/
+version: 0.2
+
+phases:
+  install:
+    commond:
+      - echo Excuting install phases
+      - echo Excuting second phase of install.
+    finally:
+      - echo Excuting install finally.
+  pre_build:
+    commands:
+      - echo Nothing to do in the pre_build phase...
+    finally:
+      - echo Excuting install finally.
+  build:
+    commands:
+      - echo Build started on `date`
+    finally:
+      - echo Excuting install finally.
+  post_build:
+    commands:
+      - echo Build completed on `date`
+    finally:
+      - echo Excuting install finally.

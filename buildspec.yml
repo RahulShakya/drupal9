@@ -4,24 +4,24 @@ phases:
   install:
     commond:
       - echo Excuting install phases
-      - echo Excuting second phase of install.
+      - echo Excuting second phase of install...
     finally:
       - echo Excuting install finally.
   pre_build:
     commands:
       - echo Nothing to do in the pre_build phase...
     finally:
-      - echo Excuting install finally.
+      - echo Excuting install finally..
   build:
     commands:
       - echo Build started on `date`
     finally:
-      - echo Excuting install finally.
+      - echo Excuting install finally..
   post_build:
     commands:
       - echo Build completed on `date`
     finally:
-      - echo Excuting install finally.
+      - echo Excuting install finally...
 artifacts:
   files:
     - '**/*'

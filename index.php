@@ -8,7 +8,7 @@
  * See COPYRIGHT.txt and LICENSE.txt files in the "core" directory.
  */
 
-use Drupal\Core\DrupalKernel;
+use Core\DrupalKernel;
 use Symfony\Component\HttpFoundation\Request;
 
 $autoloader = require_once 'autoload.php';

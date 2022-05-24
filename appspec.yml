@@ -3,3 +3,21 @@ os: linux
 files:
   - source: /
     destination: /var/www/html/
+hooks:
+  ApplicationStop:
+    - location: scripts/code-deploy/stop_server.sh
+      runas: ec2-user
+      timeout: 300
+  BeforeInstall:
+    - location: scripts/code-deploy/install_dependencies.sh
+      runas: ec2-user
+      timeout: 300
+  AfterInstall:
+    - location: scripts/code-deploy/after_install.sh
+      runas: ec2-user
+      timeout: 600
+  ApplicationStart:
+    - location: scripts/code-deploy/start_server.sh
+      runas: ec2-user
+      timeout: 300
+

@@ -1,6 +1,4 @@
 <?php
-echo "Hello";
-die;
 /**
  * @file
  * The PHP page that serves all page requests on a Drupal installation.
@@ -9,7 +7,7 @@ die;
  * See COPYRIGHT.txt and LICENSE.txt files in the "core" directory.
  */
 
-use Core\DrupalKernel;
+use Drupal\Core\DrupalKernel;
 use Symfony\Component\HttpFoundation\Request;
 
 $autoloader = require_once 'autoload.php';
